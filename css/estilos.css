@@ -1,0 +1,279 @@
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 70px #ff0, 0 0 80px #ff0, 0 0 100px #ff0;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 70px #ff0, 0 0 80px #ff0, 0 0 100px #ff0, 0 0 150px #ff0;
+  }
+}
+
+body {
+  background-color: rgb(1, 1, 53);
+  color: white;
+  margin: auto;
+  padding: 3em;
+}
+
+.navbar {
+  background-color: rgb(1, 1, 53) !important;
+  /* Cambiar el fondo de la barra de navegación a negro */
+  display: flex;
+  justify-content: center;
+
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  /* Cambiar el color del texto de los enlaces de la barra de navegación a blanco */
+  margin-right: 2em;
+  /* Aumenta la separacion de las palabras de la barra de navegacion */
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+}
+
+.carousel-caption {
+  color: white;
+  /* Cambiar el color del texto de la leyenda del carrusel a blanco */
+}
+
+.card {
+  background-color: rgb(1, 1, 53);
+  /* Cambiar el fondo de las tarjetas a negro */
+  color: white;
+  /* Cambiar el color del texto de las tarjetas a blanco */
+}
+
+.accordion-item {
+  background-color: rgb(1, 1, 53);
+  /* Cambiar el fondo de los elementos del acordeón a negro */
+  color: white;
+  /* Cambiar el color del texto de los elementos del acordeón a blanco */
+}
+
+.accordion-button {
+  color: white;
+  /* Cambiar el color del texto del botón del acordeón a blanco */
+}
+
+.text-bg-primary {
+  background-color: rgb(1, 1, 53);
+  /* Cambiar el fondo del texto del footer a negro */
+  color: white;
+  /* Cambiar el color del texto del footer a blanco */
+}
+
+/* Estilos para el diseño de la columna */
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  /* Ancho máximo del contenido */
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+  padding: 0px;
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+}
+.texto2 {
+  flex: 1;
+  padding: 20px;
+}
+.imagen {
+  flex: 1;
+  margin-left: 80px;
+  /* Separación entre la imagen y el texto */
+}
+
+.imagen img {
+  max-width: 100%;
+  /* Asegurar que la imagen no se desborde del contenedor */
+  height: auto;
+  /* Mantener la proporción de aspecto */
+}
+
+/* Estilos CSS personalizados */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  /* Tamaño de la fuente */
+  margin-right: 20px;
+  /* Separación entre la imagen y el texto */
+  
+}
+
+/* Estilos CSS para centrar horizontalmente solo el título con la imagen */
+.titulo-con-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  /* Margen superior para ajustar la posición vertical */
+  margin-right: px;
+  /* Margen izquierdo para ajustar la posición horizontal */
+}
+
+.titulo-con-imagen img {
+  margin-right: 20px;
+  /* Ajusta el margen derecho según sea necesario */
+}
+
+.centrar-carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.nav-link:hover {
+  position: relative;
+  text-decoration: none;
+  /* Quita el subrayado predeterminado */
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  /* Espacio para el subrayado */
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+  /* Color del subrayado */
+}
+
+.btn-registro {
+  border: 2px solid yellow;
+  /* Color del borde */
+  background-color: yellow;
+  /* Color de fondo */
+  color: black;
+  /* Color del texto */
+}
+
+.btn-registro:hover {
+  background-color: transparent;
+  /* Cambia el color de fondo al pasar el mouse */
+  color: yellow;
+  /* Cambia el color del texto al pasar el mouse */
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente */
+}
+
+.texto {
+  flex: 1;
+  /* Ocupa el espacio restante */
+  padding: 0 20px;
+  /* Espacio entre la imagen y el texto */
+}
+
+.imagen img {
+  max-width: 100%;
+  /* Ajusta el tamaño de la imagen */
+  height: auto;
+  /* Mantiene la proporción */
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-nav .nav-link:hover::before {
+  background-color: #ff0;
+  /* Cambia este color si deseas otro color de luz neon */
+  animation: neon-pulse 1s infinite alternate;
+  /* Aplica la animación de pulso de luz neon */
+}
+
+#carouselExampleCaptions .carousel-item {
+  position: relative;
+}
+
+#carouselExampleCaptions .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semitransparente */
+  padding: 20px;
+  /* Espaciado interno */
+}
+
+#carouselExampleCaptions h5,
+#carouselExampleCaptions p {
+  color: white;
+  /* Color del texto */
+  font-weight: bold;
+  /* Grosor de la letra */
+  margin: 0;
+  /* Elimina el margen por defecto */
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.texto h1 {
+  animation: jump 2s infinite;
+}
+
+.texto h3 {
+  animation: jump 2s infinite;
+}
+
+.texto p {
+  animation: jump 2s infinite;
+}
+
+.imagen img {
+  animation: girar 4s infinite linear;
+  /* Aplica la animación de rotación */
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+    /* Empieza sin rotación */
+  }
+  to {
+    transform: rotate(0deg);
+    /* Termina con una rotación completa de 360 grados */
+  }
+}
+.footer .text-bg-primary {
+  background-color: rgb(1, 1, 53) !important;
+  color: #ffffff !important;
+}
